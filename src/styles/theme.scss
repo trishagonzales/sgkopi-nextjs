@@ -1,0 +1,217 @@
+@layer theme {
+  @font-face {
+    font-family: Mensa;
+    src: url('/font/mensa.otf') format('opentype');
+  }
+
+  :root {
+    /* Fontsize */
+
+    --fs-1: clamp(0.7778rem, 0.7222rem + 0.2778vi, 0.9375rem);
+    --fs-2: clamp(0.875rem, 0.788rem + 0.4348vi, 1.125rem);
+    --fs-3: clamp(0.9844rem, 0.8572rem + 0.6359vi, 1.35rem);
+    --fs-4: clamp(1.1074rem, 0.9291rem + 0.8914vi, 1.62rem);
+    --fs-5: clamp(1.2458rem, 1.003rem + 1.2142vi, 1.944rem);
+    --fs-6: clamp(1.4016rem, 1.0777rem + 1.6195vi, 2.3328rem);
+    --fs-7: clamp(1.5768rem, 1.1515rem + 2.1262vi, 2.7994rem);
+    --fs-8: clamp(1.7739rem, 1.2224rem + 2.7571vi, 3.3592rem);
+    --fs-9: clamp(1.9956rem, 1.2876rem + 3.5399vi, 4.0311rem);
+    --fs-10: clamp(2.2451rem, 1.3434rem + 4.5082vi, 4.8373rem);
+    --fs-DEFAULT: var(--fs-2);
+
+    /* Fontweight */
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    /* Font family */
+
+    --font-brand: Mensa, sans-serif;
+
+    --font-heading: var(--font-poppins), -apple-system, BlinkMacSystemFont,
+      'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)',
+      system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+    --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont,
+      'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)',
+      system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+
+    /* Line height */
+
+    --line-none: 1;
+    --line-sm: 1.25;
+    --line-md: 1.5;
+    --line-lg: 1.75;
+    --line-DEFAULT: var(--line-lg);
+
+    /* Spacing */
+
+    --space-xs: clamp(0.25rem, calc(0rem + 0.63vw), 0.5rem);
+    --space-sm: clamp(0.5rem, calc(0.25rem + 0.63vw), 0.75rem);
+    --space-md: clamp(0.75rem, calc(0.5rem + 0.63vw), 1rem);
+    --space-lg: clamp(1rem, calc(0.5rem + 1.25vw), 1.5rem);
+    --space-xl: clamp(1.5rem, calc(1rem + 1.25vw), 2rem);
+    --space-2xl: clamp(2rem, calc(1rem + 2.5vw), 3rem);
+    --space-3xl: clamp(3rem, calc(2rem + 2.5vw), 4rem);
+    --space-4xl: clamp(4rem, calc(2rem + 5vw), 6rem);
+    --space-DEFAULT: var(--space-sm);
+
+    /* Border width */
+
+    --borderwidth-xs: 1px;
+    --borderwidth-sm: 2px;
+    --borderwidth-md: 3px;
+    --borderwidth-DEFAULT: var(--borderW-xs);
+
+    /* Border radius */
+
+    --radius-none: none;
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-DEFAULT: var(--radius-xs);
+
+    /* Sizing */
+
+    --size-xs: 20rem;
+    --size-sm: 24rem;
+    --size-md: 28rem;
+    --size-lg: 32rem;
+    --size-xl: 36rem;
+    --size-2xl: 42rem;
+    --size-3xl: 48rem;
+    --size-4xl: 56rem;
+    --size-5xl: 64rem;
+    --size-6xl: 72rem;
+    --size-7xl: 80rem;
+    --size-8xl: 90rem;
+    --size-prose: 65ch;
+    --size-full: 100%;
+    --size-min: min-content;
+    --size-max: max-content;
+    --size-fit: fit-content;
+
+    /* Breakpoints */
+
+    --break-sm: 640px;
+    --break-md: 768px;
+    --break-lg: 1024px;
+    --break-xl: 1280px;
+    --break-2xl: 1536px;
+
+    /* Shadows */
+
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+    /* Aspect ratio */
+
+    --ratio-square: 1 / 1;
+    --ratio-landscape: 4 / 3;
+    --ratio-portrait: 3 / 4;
+    --ratio-wide: 16 / 9;
+    --ratio-ultrawide: 18 / 5;
+    --ratio-golden: 1.618 / 1;
+
+    /* Colors */
+
+    --gray-50: #fafafa;
+    --gray-100: #f4f4f5;
+    --gray-200: #e4e4e7;
+    --gray-300: #d4d4d8;
+    --gray-400: #a1a1aa;
+    --gray-500: #71717a;
+    --gray-600: #52525b;
+    --gray-700: #3f3f46;
+    --gray-800: #27272a;
+    --gray-900: #18181b;
+    --gray-950: #09090b;
+
+    --accent-50: #fff7ed;
+    --accent-100: #ffedd5;
+    --accent-200: #fed7aa;
+    --accent-300: #fdba74;
+    --accent-400: #fb923c;
+    --accent-500: #f97316;
+    --accent-600: #ea580c;
+    --accent-700: #c2410c;
+    --accent-800: #9a3412;
+    --accent-900: #7c2d12;
+    --accent-950: #431407;
+
+    --danger-50: #fef2f2;
+    --danger-100: #fee2e2;
+    --danger-200: #fecaca;
+    --danger-300: #fca5a5;
+    --danger-400: #f87171;
+    --danger-500: #ef4444;
+    --danger-600: #dc2626;
+    --danger-700: #b91c1c;
+    --danger-800: #991b1b;
+    --danger-900: #7f1d1d;
+    --danger-950: #450a0a;
+
+    --warning-50: #fefce8;
+    --warning-100: #fef9c3;
+    --warning-200: #fef08a;
+    --warning-300: #fde047;
+    --warning-400: #facc15;
+    --warning-500: #eab308;
+    --warning-600: #ca8a04;
+    --warning-700: #a16207;
+    --warning-800: #854d0e;
+    --warning-900: #713f12;
+    --warning-950: #422006;
+
+    --success-50: #f0fdf4;
+    --success-100: #dcfce7;
+    --success-200: #bbf7d0;
+    --success-300: #86efac;
+    --success-400: #4ade80;
+    --success-500: #22c55e;
+    --success-600: #16a34a;
+    --success-700: #15803d;
+    --success-800: #166534;
+    --success-900: #14532d;
+    --success-950: #052e16;
+
+    --info-50: #f0f9ff;
+    --info-100: #e0f2fe;
+    --info-200: #bae6fd;
+    --info-300: #7dd3fc;
+    --info-400: #38bdf8;
+    --info-500: #0ea5e9;
+    --info-600: #0284c7;
+    --info-700: #0369a1;
+    --info-800: #075985;
+    --info-900: #0c4a6e;
+    --info-950: #082f49;
+
+    --fg-default: var(--gray-50);
+    --fg-emphasized: var(--gray-100);
+    --fg-muted: var(--gray-200);
+    --fg-subtle: var(--gray-300);
+    --fg-disabled: var(--gray-400);
+    --bg-emphasized: var(--gray-500);
+    --bg-muted: var(--gray-600);
+    --bg-subtle: var(--gray-700);
+    --bg-disabled: var(--gray-800);
+    --bg-default: var(--gray-900);
+    --bg-canvas: var(--gray-950);
+
+    --accent-fg: var(--accent-300);
+    --accent-default: var(--accent-400);
+    --accent-emphasized: var(--accent-500);
+    --accent-muted: var(--accent-600);
+    --accent-subtle: var(--accent-700);
+  }
+}

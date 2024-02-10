@@ -1,0 +1,29 @@
+@layer global, theme, patterns, primitives;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './theme.scss';
+@import './patterns.scss';
+
+@layer global {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-body);
+    font-size: var(--fs-2);
+    background-color: var(--bg-default);
+  }
+}
