@@ -1,0 +1,95 @@
+@use '/src/styles/pattern';
+
+.navbar {
+  @include pattern.container-content;
+  min-height: 3rem;
+  padding: var(--space-DEFAULT) var(--space-lg);
+  background: var(--bg-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  gap: var(--space-DEFAULT);
+
+  &-logo-container {
+    position: relative;
+    width: 2rem;
+  }
+
+  &-name {
+    @include pattern.title-sm;
+    font-family: var(--font-brand);
+  }
+}
+
+.nav-menu {
+  &-mobile-btn {
+    display: none;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav-item {
+  @include pattern.body;
+  padding-block: 1em;
+  position: relative;
+  font-size: var(--fs-2);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: color var(--time-slow) ease;
+
+  &:hover {
+    color: var(--accent-emphasized);
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.nav-item::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background: var(--accent-emphasized);
+  transition: width var(--time-normal) ease;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: var(--space-DEFAULT);
+
+  button {
+    font-size: var(--fs-2);
+  }
+}
+
+.search-dialog {
+  top: 15%;
+  padding: 0.8em;
+  background: var(--bg-default);
+
+  &-close-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .nav-menu {
+    display: none;
+
+    &-mobile-btn {
+      display: block;
+    }
+  }
+}

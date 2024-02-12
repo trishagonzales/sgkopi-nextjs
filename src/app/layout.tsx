@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'SG KOPI',
+  title: 'SG Kopi',
   description:
     'Fuel your Pagsanjan adventure with a stop to our coffee shop, offering a range of beverages made with premium Singapore-sourced coffee beans paired with indulgent treats.',
 };
@@ -29,7 +29,11 @@ export default function RootLayout({
   navbar: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={`${inter.variable} ${poppins.variable}`}>
+    <html
+      lang='en'
+      className={`${inter.variable} ${poppins.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         {navbar}
         {children}
