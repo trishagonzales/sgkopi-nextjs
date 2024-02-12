@@ -1,11 +1,11 @@
-@layer global, theme, patterns, primitives;
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer global, theme, patterns, primitives;
+
 @import './theme.scss';
-@import './patterns.scss';
+@import './shadcn.scss';
 
 @layer global {
   *,
@@ -14,16 +14,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  li {
-    list-style-type: none;
+    font: inherit;
   }
 
   body {
     min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--bg-canvas);
+
     font-family: var(--font-body);
     font-size: var(--fs-2);
-    background-color: var(--bg-default);
+    line-height: var(--line-DEFAULT);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  li {
+    list-style-type: none;
   }
 }

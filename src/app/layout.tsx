@@ -1,3 +1,4 @@
+import '@/styles/index.scss';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 
@@ -5,13 +6,13 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['700'],
   display: 'swap',
-  variable: '--font-poppins',
+  variable: '--font-heading',
 });
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-body',
 });
 
 export const metadata: Metadata = {
@@ -22,12 +23,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  navbar,
 }: Readonly<{
   children: React.ReactNode;
+  navbar: React.ReactNode;
 }>) {
   return (
     <html lang='en' className={`${inter.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        {navbar}
+        {children}
+      </body>
     </html>
   );
 }

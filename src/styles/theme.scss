@@ -5,114 +5,6 @@
   }
 
   :root {
-    /* Fontsize */
-
-    --fs-1: clamp(0.7778rem, 0.7222rem + 0.2778vi, 0.9375rem);
-    --fs-2: clamp(0.875rem, 0.788rem + 0.4348vi, 1.125rem);
-    --fs-3: clamp(0.9844rem, 0.8572rem + 0.6359vi, 1.35rem);
-    --fs-4: clamp(1.1074rem, 0.9291rem + 0.8914vi, 1.62rem);
-    --fs-5: clamp(1.2458rem, 1.003rem + 1.2142vi, 1.944rem);
-    --fs-6: clamp(1.4016rem, 1.0777rem + 1.6195vi, 2.3328rem);
-    --fs-7: clamp(1.5768rem, 1.1515rem + 2.1262vi, 2.7994rem);
-    --fs-8: clamp(1.7739rem, 1.2224rem + 2.7571vi, 3.3592rem);
-    --fs-9: clamp(1.9956rem, 1.2876rem + 3.5399vi, 4.0311rem);
-    --fs-10: clamp(2.2451rem, 1.3434rem + 4.5082vi, 4.8373rem);
-    --fs-DEFAULT: var(--fs-2);
-
-    /* Fontweight */
-
-    --fw-regular: 400;
-    --fw-semibold: 600;
-    --fw-bold: 700;
-    --fw-extrabold: 800;
-
-    /* Font family */
-
-    --font-brand: Mensa, sans-serif;
-
-    --font-heading: var(--font-poppins), -apple-system, BlinkMacSystemFont,
-      'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)',
-      system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-
-    --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont,
-      'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)',
-      system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-
-    /* Line height */
-
-    --line-none: 1;
-    --line-sm: 1.25;
-    --line-md: 1.5;
-    --line-lg: 1.75;
-    --line-DEFAULT: var(--line-lg);
-
-    /* Spacing */
-
-    --space-xs: clamp(0.25rem, calc(0rem + 0.63vw), 0.5rem);
-    --space-sm: clamp(0.5rem, calc(0.25rem + 0.63vw), 0.75rem);
-    --space-md: clamp(0.75rem, calc(0.5rem + 0.63vw), 1rem);
-    --space-lg: clamp(1rem, calc(0.5rem + 1.25vw), 1.5rem);
-    --space-xl: clamp(1.5rem, calc(1rem + 1.25vw), 2rem);
-    --space-2xl: clamp(2rem, calc(1rem + 2.5vw), 3rem);
-    --space-3xl: clamp(3rem, calc(2rem + 2.5vw), 4rem);
-    --space-4xl: clamp(4rem, calc(2rem + 5vw), 6rem);
-    --space-DEFAULT: var(--space-sm);
-
-    /* Border width */
-
-    --borderwidth-xs: 1px;
-    --borderwidth-sm: 2px;
-    --borderwidth-md: 3px;
-    --borderwidth-DEFAULT: var(--borderW-xs);
-
-    /* Border radius */
-
-    --radius-none: none;
-    --radius-xs: 4px;
-    --radius-sm: 8px;
-    --radius-DEFAULT: var(--radius-xs);
-
-    /* Sizing */
-
-    --size-xs: 20rem;
-    --size-sm: 24rem;
-    --size-md: 28rem;
-    --size-lg: 32rem;
-    --size-xl: 36rem;
-    --size-2xl: 42rem;
-    --size-3xl: 48rem;
-    --size-4xl: 56rem;
-    --size-5xl: 64rem;
-    --size-6xl: 72rem;
-    --size-7xl: 80rem;
-    --size-8xl: 90rem;
-    --size-prose: 65ch;
-    --size-full: 100%;
-    --size-min: min-content;
-    --size-max: max-content;
-    --size-fit: fit-content;
-
-    /* Breakpoints */
-
-    --break-sm: 640px;
-    --break-md: 768px;
-    --break-lg: 1024px;
-    --break-xl: 1280px;
-    --break-2xl: 1536px;
-
-    /* Shadows */
-
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-      0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-
     /* Aspect ratio */
 
     --ratio-square: 1 / 1;
@@ -121,6 +13,46 @@
     --ratio-wide: 16 / 9;
     --ratio-ultrawide: 18 / 5;
     --ratio-golden: 1.618 / 1;
+
+    /* Blurs */
+
+    --blur-sm: 4px;
+    --blur-base: 8px;
+    --blur-md: 12px;
+    --blur-lg: 16px;
+    --blur-xl: 24px;
+    --blur-2xl: 40px;
+    --blur-3xl: 64px;
+
+    /* Border radius */
+
+    --radius-none: none;
+    --radius-xs: 0.125rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-full: 9999px;
+    --radius-DEFAULT: var(--radius-sm);
+
+    /* Border width */
+
+    --borderwidth-xs: 1px;
+    --borderwidth-sm: 2px;
+    --borderwidth-md: 3px;
+    --borderwidth-DEFAULT: var(--borderwidth-xs);
+
+    /* Breakpoints */
+
+    --screen-xs: 480px;
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1280px;
+    --screen-2xl: 1366px;
+    --screen-3xl: 1536px;
 
     /* Colors */
 
@@ -196,22 +128,108 @@
     --info-900: #0c4a6e;
     --info-950: #082f49;
 
-    --fg-default: var(--gray-50);
-    --fg-emphasized: var(--gray-100);
-    --fg-muted: var(--gray-200);
-    --fg-subtle: var(--gray-300);
-    --fg-disabled: var(--gray-400);
+    --fg-default: var(--gray-950);
+    --fg-emphasized: var(--gray-900);
+    --fg-muted: var(--gray-800);
+    --fg-subtle: var(--gray-700);
+    --fg-disabled: var(--gray-600);
     --bg-emphasized: var(--gray-500);
-    --bg-muted: var(--gray-600);
-    --bg-subtle: var(--gray-700);
-    --bg-disabled: var(--gray-800);
-    --bg-default: var(--gray-900);
-    --bg-canvas: var(--gray-950);
+    --bg-muted: var(--gray-400);
+    --bg-subtle: var(--gray-300);
+    --bg-disabled: var(--gray-200);
+    --bg-default: var(--gray-100);
+    --bg-canvas: var(--gray-50);
 
-    --accent-fg: var(--accent-300);
-    --accent-default: var(--accent-400);
-    --accent-emphasized: var(--accent-500);
-    --accent-muted: var(--accent-600);
-    --accent-subtle: var(--accent-700);
+    --accent-fg: var(--accent-800);
+    --accent-default: var(--accent-700);
+    --accent-emphasized: var(--accent-600);
+    --accent-muted: var(--accent-500);
+    --accent-subtle: var(--accent-400);
+    --accent-disabled: var(--accent-300);
+    --accent-canvas: var(--accent-200);
+
+    /* Duration */
+
+    --time-fastest: 75ms;
+    --time-faster: 100ms;
+    --time-fast: 150ms;
+    --time-normal: 200ms;
+    --time-slow: 300ms;
+    --time-slower: 500ms;
+    --time-slowest: 700ms;
+    --time-DEFAULT: var(var(--time-normal));
+
+    /* Line height */
+
+    --line-none: 1;
+    --line-sm: 1.25;
+    --line-md: 1.5;
+    --line-lg: 1.75;
+    --line-DEFAULT: var(--line-md);
+
+    /* Font family */
+
+    --font-brand: Mensa, sans-serif;
+
+    /* Font size */
+
+    --fs-1: clamp(0.7778rem, 0.7222rem + 0.2778vi, 0.9375rem);
+    --fs-2: clamp(0.875rem, 0.788rem + 0.4348vi, 1.125rem);
+    --fs-3: clamp(0.9844rem, 0.8572rem + 0.6359vi, 1.35rem);
+    --fs-4: clamp(1.1074rem, 0.9291rem + 0.8914vi, 1.62rem);
+    --fs-5: clamp(1.2458rem, 1.003rem + 1.2142vi, 1.944rem);
+    --fs-6: clamp(1.4016rem, 1.0777rem + 1.6195vi, 2.3328rem);
+    --fs-7: clamp(1.5768rem, 1.1515rem + 2.1262vi, 2.7994rem);
+    --fs-8: clamp(1.7739rem, 1.2224rem + 2.7571vi, 3.3592rem);
+    --fs-9: clamp(1.9956rem, 1.2876rem + 3.5399vi, 4.0311rem);
+    --fs-10: clamp(2.2451rem, 1.3434rem + 4.5082vi, 4.8373rem);
+    --fs-DEFAULT: var(--fs-2);
+
+    /* Font weight */
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    /* Shadows */
+
+    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+    /* Spacing */
+
+    --space-xs: clamp(0.25rem, calc(0rem + 0.63vw), 0.5rem);
+    --space-sm: clamp(0.5rem, calc(0.25rem + 0.63vw), 0.75rem);
+    --space-md: clamp(0.75rem, calc(0.5rem + 0.63vw), 1rem);
+    --space-lg: clamp(1rem, calc(0.5rem + 1.25vw), 1.5rem);
+    --space-xl: clamp(1.5rem, calc(1rem + 1.25vw), 2rem);
+    --space-2xl: clamp(2rem, calc(1rem + 2.5vw), 3rem);
+    --space-3xl: clamp(3rem, calc(2rem + 2.5vw), 4rem);
+    --space-4xl: clamp(4rem, calc(2rem + 5vw), 6rem);
+    --space-DEFAULT: var(--space-sm);
+
+    /* Width */
+
+    --w-auto: auto;
+    --w-full: 100%;
+    --w-screen: 100vw;
+    --w-svw: 100svw;
+    --w-lvw: 100lvw;
+    --w-dvw: 100dvw;
+    --w-min: min-content;
+    --w-max: max-content;
+    --w-fit: fit-content;
+    --w-prose: 65ch;
+    --w-content: var(--screen-2xl);
+    --w-page: var(--screen-3xl);
   }
 }
