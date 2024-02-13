@@ -1,0 +1,129 @@
+@use '/src/styles/pattern';
+
+.homepage {
+  @include pattern.container-page;
+}
+
+.hero {
+  height: calc(100dvh - 4rem);
+  display: grid;
+  grid-template-areas: 'stack';
+
+  & > * {
+    grid-area: stack;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(50%);
+    z-index: -100;
+    overflow-y: hidden;
+  }
+
+  .image-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #00000050;
+    z-index: -50;
+  }
+
+  &-title-container {
+    padding-inline: var(--space-xl);
+    width: min(56rem, 100%);
+    place-self: center;
+    text-align: center;
+  }
+
+  &-title {
+    @include pattern.title-lg;
+    font-family: var(--font-brand);
+    letter-spacing: 2px;
+    color: var(--accent-500);
+    text-shadow: 1px 1px 0 var(--accent-800), 2px 2px 0 var(--accent-800),
+      3px 3px 0 var(--accent-800);
+  }
+
+  &-subtitle {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-2xl);
+    @include pattern.display-sm;
+    color: white;
+  }
+
+  &-btn {
+    width: min(12rem, 100%);
+    background-color: var(--accent-800);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--accent-700);
+    font-size: var(--fs-2);
+
+    &:hover {
+      background-color: var(--accent-900);
+    }
+  }
+}
+
+@media (width < 768px) {
+  .hero {
+    height: min(768px, 100dvh);
+  }
+}
+
+@media (width < 640px) {
+  .hero {
+    height: calc(100dvh - 3.5rem);
+  }
+}
+
+@media (width < 480px) {
+  .hero-btn {
+    width: 100%;
+  }
+}
+
+.feature {
+  background-color: var(--bg-default);
+
+  &-content {
+    width: min(var(--screen-lg), 100%);
+    margin-inline: auto;
+    padding-block: var(--space-lg);
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(autofit, minmax(min(20rem, 100%), 1fr));
+    grid-auto-flow: column;
+  }
+
+  &-item {
+    padding: var(--space-DEFAULT);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--bg-subtle);
+
+    display: grid;
+    column-gap: var(--space-xs);
+    align-items: center;
+    grid-template-areas:
+      'icon title'
+      'icon body';
+  }
+
+  &-icon {
+    place-self: center;
+    grid-area: icon;
+    font-size: var(--fs-5);
+    min-width: 4rem;
+  }
+
+  &-item > h3 {
+    grid-area: title;
+    font-weight: var(--fw-bold);
+  }
+
+  & > p {
+    grid-area: body;
+    color: var(--fg-muted);
+  }
+}

@@ -1,7 +1,7 @@
 @use '/src/styles/pattern';
 
 .navbar {
-  @include pattern.container-content;
+  @include pattern.container-page;
   min-height: 3rem;
   padding: var(--space-DEFAULT) var(--space-lg);
   background: var(--bg-default);
@@ -40,7 +40,7 @@
   @include pattern.body;
   padding-block: 1em;
   position: relative;
-  font-size: var(--fs-2);
+  font-size: var(--fs-DEFAULT);
   color: var(--fg-muted);
   cursor: pointer;
   transition: color var(--time-slow) ease;
@@ -58,9 +58,9 @@
   content: '';
   display: block;
   width: 0%;
-  height: 1px;
+  height: 2px;
   position: absolute;
-  bottom: 0;
+  bottom: -4%;
   background: var(--accent-emphasized);
   transition: width var(--time-normal) ease;
 }
@@ -84,7 +84,7 @@
   }
 }
 
-@media screen and (max-width: 755px) {
+@media (width < 755px) {
   .nav-menu {
     display: none;
 

@@ -3,7 +3,6 @@
 import cs from './navbar.module.scss';
 import * as Fa6 from 'react-icons/fa6';
 import * as Fa from 'react-icons/fa';
-import * as Rx from 'react-icons/rx';
 import * as Ri from 'react-icons/ri';
 import Image from 'next/image';
 import Link from 'next/link';
