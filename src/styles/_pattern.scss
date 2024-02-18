@@ -1,14 +1,21 @@
 // Textstyles
 
-@mixin body-sm {
-  font-size: var(--fs-1);
-  font-weight: var(--fw-regular);
-}
-
 @mixin caption {
   font-size: var(--fs-1);
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
+  color: var(--fg-disabled);
+}
+
+@mixin caption-heading {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+}
+
+@mixin body-sm {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-semibold);
 }
 
 @mixin body {
@@ -17,57 +24,46 @@
 }
 
 @mixin subheading {
-  font-size: var(--fs-2);
+  font-size: var(--fs-3);
   font-weight: var(--fw-semibold);
 }
 
 @mixin heading {
-  font-size: var(--fs-3);
-  font-weight: var(--fw-semibold);
-}
-
-@mixin caption-heading {
-  font-size: var(--fs-3);
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
-  color: $accent-default;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-regular);
 }
 
 @mixin title-sm {
-  font-size: var(--fs-4);
+  font-size: var(--fs-5);
   font-weight: var(--fw-semibold);
 }
 
 @mixin title-md {
-  font-size: var(--fs-5);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-regular);
 }
 
 @mixin title-lg {
-  font-size: var(--fs-6);
-}
-
-@mixin title-xl {
   font-size: var(--fs-7);
-}
-
-@mixin display {
-  font-family: var(--font-heading);
   font-weight: var(--fw-semibold);
 }
 
 @mixin display-sm {
+  font-family: var(--font-heading);
   font-size: var(--fs-8);
-  @include display;
+  font-weight: var(--fw-regular);
 }
 
 @mixin display-md {
+  font-family: var(--font-heading);
   font-size: var(--fs-9);
-  @include display;
+  font-weight: var(--fw-semibold);
 }
 
 @mixin display-lg {
+  font-family: var(--font-heading);
   font-size: var(--fs-10);
-  @include display;
+  font-weight: var(--fw-regular);
 }
 
 // Utilities
@@ -79,5 +75,10 @@
 
 @mixin container-content {
   width: min(var(--w-content), 100%);
-  padding-inline: var(--space-DEFAULT);
+  margin-inline: auto;
+}
+
+@mixin container-section {
+  width: min(var(--w-section), 100%);
+  margin-inline: auto;
 }

@@ -5,6 +5,11 @@ import heroImage from '@public/image/image-3.jpg';
 import * as Fi from 'react-icons/fi';
 import * as Lia from 'react-icons/lia';
 import * as Pi from 'react-icons/pi';
+import * as Fa6 from 'react-icons/fa6';
+import * as Fa from 'react-icons/fa';
+import * as Ri from 'react-icons/ri';
+import Link from 'next/link';
+import Footer from './_homepage/Footer';
 
 export default function Home() {
   return (
@@ -14,6 +19,7 @@ export default function Home() {
       <Promo />
       <NewProducts />
       <Menu />
+      <Footer />
     </main>
   );
 }
@@ -28,7 +34,7 @@ function Hero() {
         priority
       />
 
-      <div className={cs['image-overlay']}></div>
+      <div className={cs['hero-image-overlay']}></div>
 
       <div className={cs['hero-title-container']}>
         <h1 className={cs['hero-title']}>SG KOPI</h1>
@@ -70,14 +76,14 @@ function FeatureStrip() {
 function Promo() {
   return (
     <section className={cs['promo']}>
-      <h2 className={cs['section-title']}>Special Offers</h2>
+      <h2 className={cs['section-title']}>Special Promo</h2>
     </section>
   );
 }
 
 function NewProducts() {
   return (
-    <section className={cs['new-products']}>
+    <section className={cs['new-products-section']}>
       <h2 className={cs['section-title']}>New Products</h2>
     </section>
   );
@@ -86,7 +92,7 @@ function NewProducts() {
 function Menu() {
   return (
     <section className={cs['menu']}>
-      <h2 className={cs['section-title']}>New Products</h2>
+      <h2 className={cs['section-title']}>Menu</h2>
     </section>
   );
 }

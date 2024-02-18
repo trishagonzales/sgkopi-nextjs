@@ -16,12 +16,6 @@ import Input from '@/shadcn/input';
 export default function Navbar() {
   return (
     <header className={cs.navbar}>
-      {/* <div className='top_nav'>
-        <Fa6.FaSquareFacebook />
-        <Fa6.FaInstagram />
-        <Fa6.FaTiktok />
-      </div> */}
-
       <Sheet>
         <Sheet.Trigger asChild>
           <Button className={cs['nav-menu-mobile-btn']} size='icon'>
@@ -83,7 +77,7 @@ function Brand() {
     <Link href='/'>
       <div className={cs['brand']}>
         <div className={cs['brand-logo-container']}>
-          <Image src='/logo/brand-logo.svg' alt='SG Kopi logo' fill />
+          <Image src='/logo/sg-kopi-logo.svg' alt='SG Kopi logo' fill />
         </div>
         <h2 className={cs['brand-name']}>SG KOPI</h2>
       </div>

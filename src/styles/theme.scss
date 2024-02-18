@@ -173,29 +173,28 @@
 
     /* Font size */
 
-    // --fs-1: clamp(0.7778rem, 0.7222rem + 0.2778vi, 0.9375rem);
-    // --fs-2: clamp(0.875rem, 0.788rem + 0.4348vi, 1.125rem);
-    // --fs-3: clamp(0.9844rem, 0.8572rem + 0.6359vi, 1.35rem);
-    // --fs-4: clamp(1.1074rem, 0.9291rem + 0.8914vi, 1.62rem);
-    // --fs-5: clamp(1.2458rem, 1.003rem + 1.2142vi, 1.944rem);
-    // --fs-6: clamp(1.4016rem, 1.0777rem + 1.6195vi, 2.3328rem);
-    // --fs-7: clamp(1.5768rem, 1.1515rem + 2.1262vi, 2.7994rem);
-    // --fs-8: clamp(1.7739rem, 1.2224rem + 2.7571vi, 3.3592rem);
-    // --fs-9: clamp(1.9956rem, 1.2876rem + 3.5399vi, 4.0311rem);
-    // --fs-10: clamp(2.2451rem, 1.3434rem + 4.5082vi, 4.8373rem);
+    // --fs-1: clamp(0.8889rem, 0.8761rem + 0.064vi, 0.9375rem);
+    // --fs-2: clamp(1rem, 0.9671rem + 0.1645vi, 1.125rem);
+    // --fs-3: clamp(1.125rem, 1.0658rem + 0.2961vi, 1.35rem);
+    // --fs-4: clamp(1.2656rem, 1.1724rem + 0.4663vi, 1.62rem);
+    // --fs-5: clamp(1.4238rem, 1.2869rem + 0.6844vi, 1.944rem);
+    // --fs-6: clamp(1.6018rem, 1.4094rem + 0.9618vi, 2.3328rem);
+    // --fs-7: clamp(1.802rem, 1.5396rem + 1.3123vi, 2.7994rem);
+    // --fs-8: clamp(2.0273rem, 1.6768rem + 1.7526vi, 3.3592rem);
+    // --fs-9: clamp(2.2807rem, 1.8201rem + 2.3031vi, 4.0311rem);
+    // --fs-10: clamp(2.5658rem, 1.968rem + 2.9888vi, 4.8373rem);
     // --fs-DEFAULT: var(--fs-2);
-    
-    --fs-1: clamp(0.9688rem, 0.9479rem + 0.1042vi, 1.0313rem);
-    --fs-2: clamp(1.0898rem, 1.0406rem + 0.2461vi, 1.2375rem);
-    --fs-3: clamp(1.2261rem, 1.1398rem + 0.4315vi, 1.485rem);
-    --fs-4: clamp(1.3793rem, 1.2451rem + 0.6711vi, 1.782rem);
-    --fs-5: clamp(1.5518rem, 1.3562rem + 0.9777vi, 2.1384rem);
-    --fs-6: clamp(1.7457rem, 1.4723rem + 1.3673vi, 2.5661rem);
-    --fs-7: clamp(1.9639rem, 1.5921rem + 1.8589vi, 3.0793rem);
-    --fs-8: clamp(2.2094rem, 1.7142rem + 2.4762vi, 3.6952rem);
-    --fs-9: clamp(2.4856rem, 1.8361rem + 3.2476vi, 4.4342rem);
-    --fs-10: clamp(2.7963rem, 1.9547rem + 4.2079vi, 5.321rem);
-    --fs-DEFAULT: var(--fs-1);
+
+    --fs-1: clamp(0.8889rem, 0.8761rem + 0.064vi, 0.9375rem);
+    --fs-2: clamp(1rem, 0.9671rem + 0.1645vi, 1.125rem);
+    --fs-3: clamp(1.125rem, 1.0658rem + 0.2961vi, 1.35rem);
+    --fs-4: clamp(1.2656rem, 1.1724rem + 0.4663vi, 1.62rem);
+    --fs-5: clamp(1.4238rem, 1.2869rem + 0.6844vi, 1.944rem);
+    --fs-6: clamp(1.6018rem, 1.4094rem + 0.9618vi, 2.3328rem);
+    --fs-7: clamp(1.802rem, 1.5396rem + 1.3123vi, 2.7994rem);
+    --fs-8: clamp(2.0273rem, 1.6768rem + 1.7526vi, 3.3592rem);
+    --fs-9: clamp(2.2807rem, 1.8201rem + 2.3031vi, 4.0311rem);
+    --fs-10: clamp(2.5658rem, 1.968rem + 2.9888vi, 4.8373rem);
 
     /* Font weight */
 
@@ -227,7 +226,7 @@
     --space-2xl: clamp(2rem, calc(1rem + 2.5vw), 3rem);
     --space-3xl: clamp(3rem, calc(2rem + 2.5vw), 4rem);
     --space-4xl: clamp(4rem, calc(2rem + 5vw), 6rem);
-    --space-DEFAULT: var(--space-sm);
+    --space-DEFAULT: var(--space-md);
 
     /* Width */
 
@@ -239,6 +238,7 @@
     --w-max: max-content;
     --w-fit: fit-content;
     --w-prose: 65ch;
+    --w-section: var(--screen-xl);
     --w-content: var(--screen-2xl);
     --w-page: var(--screen-3xl);
   }
