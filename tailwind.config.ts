@@ -7,15 +7,15 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: 'var(--space-DEFAULT)',
+      padding: 'var(--space-lg)',
       screens: {
-        xs: 'var(--screen-xs)',
-        sm: 'var(--screen-sm)',
-        md: 'var(--screen-md)',
-        lg: 'var(--screen-lg)',
-        xl: 'var(--screen-xl)',
-        '2xl': 'var(--screen-2xl)',
-        '3xl': 'var(--screen-3xl)',
+        xs: '480px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1366px',
+        '3xl': '1536px',
       },
     },
 

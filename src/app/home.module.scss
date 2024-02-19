@@ -84,50 +84,6 @@
   }
 }
 
-.feature {
-  background-color: var(--bg-default);
-
-  &-content {
-    width: min(var(--screen-lg), 100%);
-    margin-inline: auto;
-    padding-block: var(--space-lg);
-    display: grid;
-    gap: var(--space-md);
-    grid-template-columns: repeat(autofit, minmax(min(20rem, 100%), 1fr));
-    grid-auto-flow: column;
-  }
-
-  &-item {
-    padding: var(--space-DEFAULT);
-    border-radius: var(--radius-lg);
-    border: 2px solid var(--bg-subtle);
-
-    display: grid;
-    column-gap: var(--space-xs);
-    align-items: center;
-    grid-template-areas:
-      'icon title'
-      'icon body';
-  }
-
-  &-icon {
-    place-self: center;
-    grid-area: icon;
-    font-size: var(--fs-5);
-    min-width: 4rem;
-  }
-
-  &-item > h3 {
-    grid-area: title;
-    font-weight: var(--fw-bold);
-  }
-
-  & > p {
-    grid-area: body;
-    color: var(--fg-muted);
-  }
-}
-
 .section-title {
   @include pattern.title-sm;
 }

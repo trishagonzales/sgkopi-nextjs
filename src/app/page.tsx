@@ -12,12 +12,13 @@ import * as Fa from 'react-icons/fa';
 import * as Ri from 'react-icons/ri';
 import Link from 'next/link';
 import Footer from './_homepage/Footer';
+import Guarantees from './_homepage/Guarantees';
 
 export default function Home() {
   return (
     <main className={cs['homepage']}>
       <Hero />
-      <FeatureStrip />
+      <Guarantees />
       <Promo />
       <NewProducts />
       <Menu />
@@ -44,32 +45,6 @@ function Hero() {
         <Button className={cs['hero-btn']} size='lg' variant='default'>
           Order Now
         </Button>
-      </div>
-    </section>
-  );
-}
-
-function FeatureStrip() {
-  return (
-    <section className={cs['feature']}>
-      <div className={cs['feature-content']}>
-        <article className={cs['feature-item']}>
-          <Fi.FiCoffee className={cs['feature-icon']} />
-          <h3>Guaranteed Fresh</h3>
-          <p>A Commitment to Quality You Can Taste</p>
-        </article>
-
-        <article className={cs['feature-item']}>
-          <Pi.PiShieldCheckBold className={cs['feature-icon']} />
-          <h3>Secure Payment</h3>
-          <p>Peace of Mind with Every Checkout</p>
-        </article>
-
-        <article className={cs['feature-item']}>
-          <Lia.LiaShippingFastSolid className={cs['feature-icon']} />
-          <h3>Fast Delivery</h3>
-          <p>Speedy Service, Because Good Coffee Can't Wait</p>
-        </article>
       </div>
     </section>
   );

@@ -1,0 +1,43 @@
+.content {
+  display: grid;
+  column-gap: var(--space-md);
+  grid-template-columns: repeat(autofit, minmax(min(20rem, 100%), 1fr));
+  grid-auto-flow: column;
+
+  @media (width < 640px) {
+    grid-auto-flow: row;
+    row-gap: var(--space-2xl);
+  }
+}
+
+.item {
+  display: grid;
+  column-gap: var(--space-xs);
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'icon title'
+    'icon body';
+
+  @media (width < 768px) {
+    grid-template-columns: min(7rem, 20%) 1fr;
+  }
+
+  & > h3 {
+    grid-area: title;
+    font-weight: var(--fw-bold);
+  }
+
+  & > p {
+    grid-area: body;
+    color: var(--fg-muted);
+    font-size: var(--fs-1);
+  }
+}
+
+.icon {
+  place-self: center;
+  grid-area: icon;
+  font-size: var(--fs-5);
+  min-width: 4rem;
+}

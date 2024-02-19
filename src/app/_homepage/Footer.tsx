@@ -89,7 +89,7 @@ const FooterStyled = classed.button(
 );
 
 const Content = classed.div('max-w-lg mx-auto py-lg pt-2xl');
-const TopContent = classed.div('flex gap-lg items-start flex-col sm:flex-row');
+const TopContent = classed.div('flex gap-lg items-start flex-col sm:flex-row sm:gap-2xl');
 
 const Column = classed.div('grow-1');
 const ColumnTitle = classed.h3(
