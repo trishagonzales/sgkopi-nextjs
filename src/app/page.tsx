@@ -1,3 +1,5 @@
+'use client';
+
 import cs from './home.module.scss';
 import Image from 'next/image';
 import Button from '@/shadcn/button';
