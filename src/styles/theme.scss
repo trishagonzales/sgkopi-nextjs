@@ -35,7 +35,7 @@
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --radius-full: 9999px;
-    --radius-DEFAULT: var(--radius-sm);
+    --radius-DEFAULT: var(--radius-lg);
 
     /* Border width */
 
@@ -56,87 +56,104 @@
 
     /* Colors */
 
-    --gray-50: #fafafa;
-    --gray-100: #f4f4f5;
-    --gray-200: #e4e4e7;
-    --gray-300: #d4d4d8;
-    --gray-400: #a1a1aa;
-    --gray-500: #71717a;
-    --gray-600: #52525b;
-    --gray-700: #3f3f46;
-    --gray-800: #27272a;
-    --gray-900: #18181b;
-    --gray-950: #09090b;
+    // --gray-50: #fafafa;
+    // --gray-100: #f4f4f5;
+    // --gray-200: #e4e4e7;
+    // --gray-300: #d4d4d8;
+    // --gray-400: #a1a1aa;
+    // --gray-500: #71717a;
+    // --gray-600: #52525b;
+    // --gray-700: #3f3f46;
+    // --gray-800: #27272a;
+    // --gray-900: #18181b;
+    // --gray-950: #09090b;
 
-    --accent-50: #fff7ed;
-    --accent-100: #ffedd5;
-    --accent-200: #fed7aa;
-    --accent-300: #fdba74;
-    --accent-400: #fb923c;
-    --accent-500: #f97316;
-    --accent-600: #ea580c;
-    --accent-700: #c2410c;
-    --accent-800: #9a3412;
-    --accent-900: #7c2d12;
-    --accent-950: #431407;
+    --gray-50: #fbfaf7;
+    --gray-100: #f8f0da;
+    --gray-200: #f0dbb2;
+    --gray-300: #dbb57e;
+    --gray-400: #c2894f;
+    --gray-500: #a5682e;
+    --gray-600: #874d1e;
+    --gray-700: #673a19;
+    --gray-800: #462713;
+    --gray-900: #2c180d;
 
-    --danger-50: #fef2f2;
-    --danger-100: #fee2e2;
-    --danger-200: #fecaca;
-    --danger-300: #fca5a5;
-    --danger-400: #f87171;
-    --danger-500: #ef4444;
-    --danger-600: #dc2626;
-    --danger-700: #b91c1c;
-    --danger-800: #991b1b;
-    --danger-900: #7f1d1d;
-    --danger-950: #450a0a;
+    --accent-50: #fcfbf8;
+    --accent-100: #faf0e0;
+    --accent-200: #f4d7be;
+    --accent-300: #e5ae8e;
+    --accent-400: #d7805e;
+    --accent-500: #c15d3c;
+    --accent-600: #a44327;
+    --accent-700: #7d321f;
+    --accent-800: #572216;
+    --accent-900: #35150e;
 
-    --warning-50: #fefce8;
-    --warning-100: #fef9c3;
-    --warning-200: #fef08a;
-    --warning-300: #fde047;
-    --warning-400: #facc15;
-    --warning-500: #eab308;
-    --warning-600: #ca8a04;
-    --warning-700: #a16207;
-    --warning-800: #854d0e;
-    --warning-900: #713f12;
-    --warning-950: #422006;
+    // --accent-50: #fff7ed;
+    // --accent-100: #ffedd5;
+    // --accent-200: #fed7aa;
+    // --accent-300: #fdba74;
+    // --accent-400: #fb923c;
+    // --accent-500: #f97316;
+    // --accent-600: #ea580c;
+    // --accent-700: #c2410c;
+    // --accent-800: #9a3412;
+    // --accent-900: #7c2d12;
+    // --accent-950: #431407;
 
-    --success-50: #f0fdf4;
-    --success-100: #dcfce7;
-    --success-200: #bbf7d0;
-    --success-300: #86efac;
-    --success-400: #4ade80;
-    --success-500: #22c55e;
-    --success-600: #16a34a;
-    --success-700: #15803d;
-    --success-800: #166534;
-    --success-900: #14532d;
-    --success-950: #052e16;
+    --danger-50: #fee2e2;
+    --danger-100: #fecaca;
+    --danger-200: #fca5a5;
+    --danger-300: #f87171;
+    --danger-400: #ef4444;
+    --danger-500: #dc2626;
+    --danger-600: #b91c1c;
+    --danger-700: #991b1b;
+    --danger-800: #7f1d1d;
+    --danger-900: #450a0a;
 
-    --info-50: #f0f9ff;
-    --info-100: #e0f2fe;
-    --info-200: #bae6fd;
-    --info-300: #7dd3fc;
-    --info-400: #38bdf8;
-    --info-500: #0ea5e9;
-    --info-600: #0284c7;
-    --info-700: #0369a1;
-    --info-800: #075985;
-    --info-900: #0c4a6e;
-    --info-950: #082f49;
+    --warning-50: #fef9c3;
+    --warning-100: #fef08a;
+    --warning-200: #fde047;
+    --warning-300: #facc15;
+    --warning-400: #eab308;
+    --warning-500: #ca8a04;
+    --warning-600: #a16207;
+    --warning-700: #854d0e;
+    --warning-800: #713f12;
+    --warning-900: #422006;
 
-    --fg-default: var(--gray-950);
-    --fg-emphasized: var(--gray-900);
-    --fg-muted: var(--gray-800);
-    --fg-subtle: var(--gray-700);
-    --fg-disabled: var(--gray-600);
-    --bg-emphasized: var(--gray-500);
-    --bg-muted: var(--gray-400);
-    --bg-subtle: var(--gray-300);
-    --bg-disabled: var(--gray-200);
+    --success-50: #dcfce7;
+    --success-100: #bbf7d0;
+    --success-200: #86efac;
+    --success-300: #4ade80;
+    --success-400: #22c55e;
+    --success-500: #16a34a;
+    --success-600: #15803d;
+    --success-700: #166534;
+    --success-800: #14532d;
+    --success-900: #052e16;
+
+    --info-50: #e0f2fe;
+    --info-100: #bae6fd;
+    --info-200: #7dd3fc;
+    --info-300: #38bdf8;
+    --info-400: #0ea5e9;
+    --info-500: #0284c7;
+    --info-600: #0369a1;
+    --info-700: #075985;
+    --info-800: #0c4a6e;
+    --info-900: #082f49;
+
+    --fg-default: var(--gray-900);
+    --fg-emphasized: var(--gray-800);
+    --fg-muted: var(--gray-700);
+    --fg-subtle: var(--gray-600);
+    --fg-disabled: var(--gray-500);
+    --bg-emphasized: var(--gray-400);
+    --bg-muted: var(--gray-300);
+    --bg-subtle: var(--gray-200);
     --bg-default: var(--gray-100);
     --bg-canvas: var(--gray-50);
 
@@ -173,18 +190,6 @@
 
     /* Font size */
 
-    // --fs-1: clamp(0.8889rem, 0.8761rem + 0.064vi, 0.9375rem);
-    // --fs-2: clamp(1rem, 0.9671rem + 0.1645vi, 1.125rem);
-    // --fs-3: clamp(1.125rem, 1.0658rem + 0.2961vi, 1.35rem);
-    // --fs-4: clamp(1.2656rem, 1.1724rem + 0.4663vi, 1.62rem);
-    // --fs-5: clamp(1.4238rem, 1.2869rem + 0.6844vi, 1.944rem);
-    // --fs-6: clamp(1.6018rem, 1.4094rem + 0.9618vi, 2.3328rem);
-    // --fs-7: clamp(1.802rem, 1.5396rem + 1.3123vi, 2.7994rem);
-    // --fs-8: clamp(2.0273rem, 1.6768rem + 1.7526vi, 3.3592rem);
-    // --fs-9: clamp(2.2807rem, 1.8201rem + 2.3031vi, 4.0311rem);
-    // --fs-10: clamp(2.5658rem, 1.968rem + 2.9888vi, 4.8373rem);
-    // --fs-DEFAULT: var(--fs-2);
-
     --fs-1: clamp(0.8889rem, 0.8761rem + 0.064vi, 0.9375rem);
     --fs-2: clamp(1rem, 0.9671rem + 0.1645vi, 1.125rem);
     --fs-3: clamp(1.125rem, 1.0658rem + 0.2961vi, 1.35rem);
@@ -201,7 +206,6 @@
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
-    --fw-extrabold: 800;
 
     /* Shadows */
 
@@ -217,15 +221,6 @@
     --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 
     /* Spacing */
-
-    // --space-xs: clamp(0.25rem, calc(0rem + 0.63vw), 0.5rem);
-    // --space-sm: clamp(0.5rem, calc(0.25rem + 0.63vw), 0.75rem);
-    // --space-md: clamp(0.75rem, calc(0.5rem + 0.63vw), 1rem);
-    // --space-lg: clamp(1rem, calc(0.5rem + 1.25vw), 1.5rem);
-    // --space-xl: clamp(1.5rem, calc(1rem + 1.25vw), 2rem);
-    // --space-2xl: clamp(2rem, calc(1rem + 2.5vw), 3rem);
-    // --space-3xl: clamp(3rem, calc(2rem + 2.5vw), 4rem);
-    // --space-4xl: clamp(4rem, calc(2rem + 5vw), 6rem);
 
     --space-xs: clamp(0.25rem, 0.1678rem + 0.4112vi, 0.5625rem);
     --space-sm: clamp(0.5rem, 0.4013rem + 0.4934vi, 0.875rem);

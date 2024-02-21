@@ -1,0 +1,51 @@
+@use './pattern';
+
+@layer utilities {
+  .caption {
+    @include pattern.caption;
+  }
+
+  .caption-heading {
+    @include pattern.caption-heading;
+  }
+
+  .body-sm {
+    @include pattern.body-sm;
+  }
+
+  .body {
+    @include pattern.body;
+  }
+
+  .subheading {
+    @include pattern.subheading;
+  }
+
+  .heading {
+    @include pattern.heading;
+  }
+
+  .title-sm {
+    @include pattern.title-sm;
+  }
+
+  .title-md {
+    @include pattern.title-md;
+  }
+
+  .title-lg {
+    @include pattern.title-lg;
+  }
+
+  .display-sm {
+    @include pattern.display-sm;
+  }
+
+  .display-md {
+    @include pattern.display-md;
+  }
+
+  .display-lg {
+    @include pattern.display-lg;
+  }
+}

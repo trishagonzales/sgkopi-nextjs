@@ -84,7 +84,6 @@ const config: Config = {
         700: 'var(--gray-700)',
         800: 'var(--gray-800)',
         900: 'var(--gray-900)',
-        950: 'var(--gray-950)',
       },
       danger: {
         50: 'var(--danger-50)',
@@ -97,7 +96,6 @@ const config: Config = {
         700: 'var(--danger-700)',
         800: 'var(--danger-800)',
         900: 'var(--danger-900)',
-        950: 'var(--danger-950)',
       },
       success: {
         50: 'var(--success-50)',
@@ -110,7 +108,6 @@ const config: Config = {
         700: 'var(--success-700)',
         800: 'var(--success-800)',
         900: 'var(--success-900)',
-        950: 'var(--success-950)',
       },
       warning: {
         50: 'var(--warning-50)',
@@ -123,7 +120,6 @@ const config: Config = {
         700: 'var(--warning-700)',
         800: 'var(--warning-800)',
         900: 'var(--warning-900)',
-        950: 'var(--warning-950)',
       },
       info: {
         50: 'var(--info-50)',
@@ -136,9 +132,7 @@ const config: Config = {
         700: 'var(--info-700)',
         800: 'var(--info-800)',
         900: 'var(--info-900)',
-        950: 'var(--info-950)',
       },
-
       accent: {
         50: 'var(--accent-50)',
         100: 'var(--accent-100)',
@@ -150,7 +144,6 @@ const config: Config = {
         700: 'var(--accent-700)',
         800: 'var(--accent-800)',
         900: 'var(--accent-900)',
-        950: 'var(--accent-950)',
 
         fg: 'var(--accent-fg)',
         default: 'var(--accent-default)',
@@ -173,7 +166,6 @@ const config: Config = {
         emphasized: 'var(--bg-emphasized)',
         muted: 'var(--bg-muted)',
         subtle: 'var(--bg-subtle)',
-        disabled: 'var(--bg-disabled)',
         default: 'var(--bg-default)',
         canvas: 'var(--bg-canvas)',
       },

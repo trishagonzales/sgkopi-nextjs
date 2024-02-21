@@ -13,6 +13,9 @@ import * as Ri from 'react-icons/ri';
 import Link from 'next/link';
 import Footer from './_homepage/Footer';
 import Guarantees from './_homepage/Guarantees';
+import Product from '@/modules/product/Product';
+import { faker } from '@faker-js/faker';
+import ProductCard from './product/ProductCard';
 
 export default function Home() {
   return (
@@ -66,10 +69,21 @@ function NewProducts() {
   );
 }
 
+const productData = Product.reconstruct({
+  id: faker.string.uuid(),
+  imageUrl: '/image/image-2.jpg',
+  name: 'Matcha Espresso',
+  description: faker.commerce.productDescription(),
+  price: Number(faker.commerce.price()),
+  category: faker.commerce.department(),
+});
+
 function Menu() {
   return (
     <section className={cs['menu']}>
       <h2 className={cs['section-title']}>Menu</h2>
+
+      <ProductCard product={productData} />
     </section>
   );
 }
