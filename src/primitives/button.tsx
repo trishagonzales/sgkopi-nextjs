@@ -7,6 +7,7 @@ type Props = {
   isIcon?: boolean;
   isLoading?: boolean;
   isDisabled?: boolean;
+
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
 } & React.HTMLAttributes<HTMLButtonElement>;

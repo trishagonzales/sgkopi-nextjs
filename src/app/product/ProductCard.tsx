@@ -47,6 +47,7 @@ export default function ProductCard(props: Props) {
 
 const Card = classed.article(cs.card);
 const ImageContainer = classed.div(cs.imageContainer);
+
 const Name = classed.h3(cs.name);
 const Price = classed.p(cs.price);
 

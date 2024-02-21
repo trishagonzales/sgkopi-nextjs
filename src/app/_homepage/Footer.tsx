@@ -2,7 +2,7 @@ import { classed } from '@tw-classed/react';
 import { classed as css } from '@tw-classed/core';
 import Image from 'next/image';
 
-import sgkopiLogo from '/public/logo/sg-kopi-logo.svg';
+import sgkopiLogo from '/public/logo/sgkopi-logo.svg';
 import * as Fa6 from 'react-icons/fa6';
 import * as Io5 from 'react-icons/io5';
 

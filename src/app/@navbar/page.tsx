@@ -77,7 +77,7 @@ function Brand() {
     <Link href='/'>
       <div className={cs['brand']}>
         <div className={cs['brand-logo-container']}>
-          <Image src='/logo/sg-kopi-logo.svg' alt='SG Kopi logo' fill />
+          <Image src='/logo/sgkopi-logo.svg' alt='SG Kopi logo' fill />
         </div>
         <h2 className={cs['brand-name']}>SG KOPI</h2>
       </div>
