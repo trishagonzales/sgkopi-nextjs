@@ -16,7 +16,7 @@
 }
 
 .card:hover {
-  border-color: var(--accent-400);
+  border-color: var(--accent-300);
   box-shadow: var(--shadow-xl);
 
   .image {
@@ -52,6 +52,7 @@
 
 .whishlistBtn {
   flex: 0 1 auto;
+  padding-inline: 0.73em !important;
 }
 
 .orderBtn {

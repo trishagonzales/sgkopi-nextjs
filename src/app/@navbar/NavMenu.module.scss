@@ -1,0 +1,28 @@
+@use '@/styles/pattern';
+
+.item {
+  @include pattern.body-sm;
+  padding-block: var(--space-md);
+  color: var(--fg-subtle);
+  position: relative;
+  transition: color 300ms ease;
+
+  &:hover {
+    color: var(--accent-900);
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.item::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  background: var(--bg-emphasized);
+  transition: width 200ms ease;
+}

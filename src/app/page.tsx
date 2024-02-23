@@ -2,7 +2,7 @@
 
 import cs from './home.module.scss';
 import Image from 'next/image';
-import Button from '@/shadcn/button';
+import Button from '@/primitives/button/Button';
 import heroImage from '@public/image/image-3.jpg';
 import * as Fi from 'react-icons/fi';
 import * as Lia from 'react-icons/lia';
@@ -45,7 +45,7 @@ function Hero() {
       <div className={cs['hero-title-container']}>
         <h1 className={cs['hero-title']}>SG KOPI</h1>
         <p className={cs['hero-subtitle']}>Discover the Taste of Singapore</p>
-        <Button className={cs['hero-btn']} size='lg' variant='default'>
+        <Button className={cs['hero-btn']} size='lg'>
           Order Now
         </Button>
       </div>

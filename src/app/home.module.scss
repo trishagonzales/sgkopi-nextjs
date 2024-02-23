@@ -5,7 +5,7 @@
 }
 
 .hero {
-  height: calc(100dvh - 4rem);
+  height: 100dvh;
   display: grid;
   grid-template-areas: 'stack';
 
@@ -72,11 +72,11 @@
   }
 }
 
-@media (width < 640px) {
-  .hero {
-    height: calc(100dvh - 3.5rem);
-  }
-}
+// @media (width < 640px) {
+//   .hero {
+//     height: calc(100dvh - 3.5rem);
+//   }
+// }
 
 @media (width < 480px) {
   .hero-btn {

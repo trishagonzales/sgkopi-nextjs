@@ -70,8 +70,8 @@ const config: Config = {
 
     colors: {
       transparent: 'transparent',
-      black: 'var(--black)',
-      white: 'var(--white)',
+      black: 'black',
+      white: 'white',
 
       gray: {
         50: 'var(--gray-50)',
@@ -144,14 +144,6 @@ const config: Config = {
         700: 'var(--accent-700)',
         800: 'var(--accent-800)',
         900: 'var(--accent-900)',
-
-        fg: 'var(--accent-fg)',
-        default: 'var(--accent-default)',
-        emphasized: 'var(--accent-emphasized)',
-        muted: 'var(--accent-muted)',
-        subtle: 'var(--accent-subtle)',
-        disabled: 'var(--accent-disabled)',
-        canvas: 'var(--accent-canvas)',
       },
 
       fg: {

@@ -92,6 +92,7 @@ const DialogTitle = React.forwardRef<
     {...props}
   />
 ));
+
 DialogTitle.displayName = DialogPrimitive.Title.displayName;
 
 const DialogDescription = React.forwardRef<
@@ -104,6 +105,7 @@ const DialogDescription = React.forwardRef<
     {...props}
   />
 ));
+
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
 
 const Dialog = Object.assign(DialogRoot, {

@@ -1,140 +1,153 @@
 'use client';
 
-import cs from './navbar.module.scss';
-import * as Fa6 from 'react-icons/fa6';
-import * as Fa from 'react-icons/fa';
-import * as Ri from 'react-icons/ri';
-import Image from 'next/image';
-import Link from 'next/link';
-import Button from '@/shadcn/button';
-import Nav from '@/shadcn/navigation-menu';
-import Popover from '@/shadcn/popover';
-import Dialog from '@/shadcn/dialog';
+import * as React from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
+import { classed } from '@tw-classed/react';
 import Sheet from '@/shadcn/sheet';
 import Input from '@/shadcn/input';
+import * as Fa6 from 'react-icons/fa6';
+import * as Ri from 'react-icons/ri';
+
+import Button from '@/primitives/button/Button';
+import Brand from './Brand';
+import NavMenu, { NavItem } from './NavMenu';
 
 export default function Navbar() {
-  return (
-    <header className={cs.navbar}>
-      <Sheet>
-        <Sheet.Trigger asChild>
-          <Button className={cs['nav-menu-mobile-btn']} size='icon'>
-            <Ri.RiMenu2Fill />
-          </Button>
-        </Sheet.Trigger>
-        <Sheet.Content side='left'>
-          <NavMenu />
-        </Sheet.Content>
-      </Sheet>
+  const [colorMode, setColorMode] = React.useState<'light' | 'dark'>('dark');
 
-      <Brand />
+  React.useEffect(() => {
+    window.onscroll = () => {
+      const userScrolled = Boolean(
+        document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
+      );
+
+      if (userScrolled) {
+        setColorMode('light');
+      } else {
+        setColorMode('dark');
+      }
+    };
+
+    return () => {
+      window.onscroll = null;
+    };
+  }, []);
+
+  const isDarkMode = colorMode === 'dark';
+
+  return (
+    <Header colorMode={colorMode}>
+      <div className='flex gap-sm'>
+        <MobileNav />
+        <Brand brandNameClass='hidden xs:block' isDarkMode={isDarkMode} />
+      </div>
+
       <NavMenu />
 
-      <div className={cs['nav-buttons']}>
-        <Dialog>
-          <Dialog.Trigger>
-            <Button size='icon'>
-              <Fa.FaSearch />
-            </Button>
-          </Dialog.Trigger>
-
-          <Dialog.Content className={cs['search-dialog']}>
-            <Input placeholder='Search' />
-          </Dialog.Content>
-          <Dialog.Close className={cs['search-dialog-close-btn']} />
-        </Dialog>
-
-        <Dialog>
-          <Dialog.Trigger>
-            <Button size='icon'>
-              <Fa6.FaUser />
-            </Button>
-          </Dialog.Trigger>
-
-          <Dialog.Content>
-            <Dialog.Header>
-              <Dialog.Title>Login</Dialog.Title>
-              <Dialog.Description></Dialog.Description>
-            </Dialog.Header>
-          </Dialog.Content>
-        </Dialog>
-
-        <Popover>
-          <Popover.Trigger>
-            <Button size='icon' variant='default'>
-              <Fa6.FaCartShopping />
-            </Button>
-          </Popover.Trigger>
-          <Popover.Content>Cart</Popover.Content>
-        </Popover>
+      <div className='flex gap-0 items-center'>
+        <NavItem className='block mr-md md:m-0 md:hidden'>Menu</NavItem>
+        <Search />
+        <Wishlist />
+        <Bag />
+        <Account />
       </div>
-    </header>
+    </Header>
   );
 }
 
-function Brand() {
-  return (
-    <Link href='/'>
-      <div className={cs['brand']}>
-        <div className={cs['brand-logo-container']}>
-          <Image src='/logo/sgkopi-logo.svg' alt='SG Kopi logo' fill />
-        </div>
-        <h2 className={cs['brand-name']}>SG KOPI</h2>
-      </div>
-    </Link>
-  );
-}
-
-function NavMenu() {
-  return (
-    <Nav className={cs['nav-menu']}>
-      <Nav.List className={cs['nav-list']}>
-        <Nav.Item>
-          <Nav.Link className={cs['nav-item']}>Home</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-          <Nav.Link className={cs['nav-item']}>Promos</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-          <Nav.Link className={cs['nav-item']}>Menu</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-          <Nav.Link className={cs['nav-item']}>About</Nav.Link>
-        </Nav.Item>
-
-        <Nav.Item>
-          <Nav.Link className={cs['nav-item']}>Contact</Nav.Link>
-        </Nav.Item>
-      </Nav.List>
-    </Nav>
-  );
-}
-
-const contactData = [
+const Header = classed.header(
+  'container-3xl w-full px-sm md:px-lg',
+  'flex items-center content-center justify-between',
+  'fixed top-0 group shadow-md',
   {
-    icon: <Fa6.FaPhoneFlip />,
-    title: '(077) 722-0372',
-    body: 'info@sg-kopi.com',
-  },
-  {
-    icon: <Fa6.FaMapLocationDot />,
-    body: '314 Bike Store Crisostomo Street Poblacion Uno, Pagsanjan, Philippines, 4008',
-  },
-];
+    variants: {
+      colorMode: {
+        light: 'bg-bg-default',
+        dark: 'bg-[#00000000] border-b-[1px] border-[#222]',
+      },
+    },
+    dataAttributes: ['colorMode'],
+  }
+);
 
-function Contact(props: {
-  icon: React.ReactNode;
-  title: string;
-  body: string;
-}) {
+function MobileNav() {
   return (
-    <div>
-      {props.icon}
-      <p>{props.title}</p>
-      <p>{props.body}</p>
-    </div>
+    <Sheet>
+      <Sheet.Trigger asChild>
+        <HamburgerButton />
+      </Sheet.Trigger>
+      <Sheet.Content side='left'>
+        <NavMenu />
+      </Sheet.Content>
+    </Sheet>
+  );
+}
+
+function HamburgerButton() {
+  return (
+    <Button variant='ghost' size='xs' isIcon className='block md:hidden'>
+      <Ri.RiMenu2Fill />
+    </Button>
+  );
+}
+
+function Search() {
+  return (
+    <Dialog.Root>
+      <Dialog.Trigger asChild>
+        <Button variant='ghost' size='xs' isIcon className='hidden md:block'>
+          <Fa6.FaMagnifyingGlass />
+        </Button>
+      </Dialog.Trigger>
+
+      <Dialog.Portal>
+        <Dialog.Overlay />
+        <Dialog.Content>
+          <Dialog.Title />
+          <Input placeholder='Search' />
+          <Dialog.Close />
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
+  );
+}
+
+const Wishlist = () => (
+  <Button variant='ghost' size='xs' isIcon>
+    <Fa6.FaHeart />
+  </Button>
+);
+
+function Bag() {
+  return (
+    <Sheet>
+      <Sheet.Trigger asChild>
+        <Button variant='ghost' size='xs' isIcon>
+          <Fa6.FaBagShopping />
+        </Button>
+      </Sheet.Trigger>
+      <Sheet.Content side='left'>
+        <NavMenu />
+      </Sheet.Content>
+    </Sheet>
+  );
+}
+
+function Account() {
+  return (
+    <Dialog.Root>
+      <Dialog.Trigger asChild>
+        <Button variant='ghost' size='xs' isIcon>
+          <Fa6.FaUser />
+        </Button>
+      </Dialog.Trigger>
+
+      <Dialog.Portal>
+        <Dialog.Overlay />
+        <Dialog.Content>
+          <Dialog.Close />
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 }
