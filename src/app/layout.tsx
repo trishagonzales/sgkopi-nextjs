@@ -1,6 +1,9 @@
-import '@/styles/index.scss';
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
+import { MantineProvider } from '@mantine/core';
+
+import '@mantine/core/styles.css';
+import '@/styles/index.scss';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -35,8 +38,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        {navbar}
-        {children}
+        <MantineProvider>
+          {navbar}
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
