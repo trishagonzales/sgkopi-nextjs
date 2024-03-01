@@ -1,0 +1,40 @@
+@use '/src/styles/pattern';
+
+.root {
+  --button-color: var(--fg-disabled);
+
+  background: none;
+  color: var(--button-color);
+  border: 1px solid transparent;
+
+  &[data-variant='solid'] {
+    background: var(--button-color);
+    border-color: var(--button-color);
+  }
+
+  &[data-variant='outline'] {
+    border-color: var(--button-color);
+
+    &:hover {
+      background: var(--bg-subtle);
+    }
+  }
+
+  &[data-variant='muted'] {
+    background: var(--bg-default);
+
+    &:hover {
+      background: var(--bg-subtle);
+    }
+  }
+
+  &[data-variant='ghost']:hover {
+    background: var(--bg-subtle);
+  }
+
+  &[data-variant='text'] {
+    &:hover {
+      color: var(--fg-subtle);
+    }
+  }
+}
