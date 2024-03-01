@@ -1,5 +1,5 @@
+import React from 'react';
 import { classedCore } from '@/lib/classed';
-import cs from './text.module.scss';
 
 type TextVariant =
   | 'caption'
@@ -20,7 +20,8 @@ type TextElement = 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 type Props = {
   variant?: TextVariant;
   as?: TextElement;
-} & React.PropsWithChildren;
+} & React.HTMLAttributes<HTMLParagraphElement | HTMLHeadingElement> &
+  React.PropsWithChildren;
 
 export default function Text({ variant = 'body', as = 'p', children }: Props) {
   switch (as) {
@@ -50,21 +51,22 @@ export default function Text({ variant = 'body', as = 'p', children }: Props) {
 const style = classedCore({
   variants: {
     variant: {
-      caption: cs.caption,
-      'caption-heading': cs['caption-heading'],
-      'body-sm': cs.bodySm,
-      body: cs.body,
+      caption: 'caption',
+      'caption-heading': 'caption-heading',
 
-      subheading: cs.subheading,
-      heading: cs.heading,
+      'body-sm': 'body-sm',
+      body: 'body',
 
-      'title-sm': cs['title-sm'],
-      'title-md': cs['title-md'],
-      'title-lg': cs['title-lg'],
+      subheading: 'subheading',
+      heading: 'heading',
 
-      'display-sm': cs['display-sm'],
-      'display-md': cs['display-md'],
-      'display-lg': cs['display-lg'],
+      'title-sm': 'title-sm',
+      'title-md': 'title-md',
+      'title-lg': 'title-lg',
+
+      'display-sm': 'display-sm',
+      'display-md': 'display-md',
+      'display-lg': 'display-lg',
     },
   },
 });

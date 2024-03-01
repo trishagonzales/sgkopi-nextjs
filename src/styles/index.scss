@@ -5,8 +5,7 @@
 @layer global, theme, patterns;
 
 @import './theme.scss';
-@import './shadcn.scss';
-@import './tailwind.scss';
+@import './utilities.scss';
 
 @layer global {
   *,
