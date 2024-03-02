@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
-import { MantineProvider } from '@mantine/core';
+import Providers from '@/providers';
 
 import '@mantine/core/styles.css';
 import '@/styles/index.scss';
@@ -35,13 +35,13 @@ export default function RootLayout({
     <html
       lang='en'
       className={`${inter.variable} ${poppins.variable}`}
-      suppressHydrationWarning
+      // suppressHydrationWarning
     >
       <body>
-        <MantineProvider>
+        <Providers>
           {navbar}
           {children}
-        </MantineProvider>
+        </Providers>
       </body>
     </html>
   );
