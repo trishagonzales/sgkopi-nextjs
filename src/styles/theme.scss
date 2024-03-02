@@ -68,16 +68,16 @@
     // --gray-900: #18181b;
     // --gray-950: #09090b;
 
-    --gray-50: #fbfaf7;
-    --gray-100: #f8f0da;
-    --gray-200: #f0dbb2;
-    --gray-300: #dbb57e;
-    --gray-400: #c2894f;
-    --gray-500: #a5682e;
-    --gray-600: #874d1e;
-    --gray-700: #673a19;
-    --gray-800: #462713;
-    --gray-900: #2c180d;
+    --grayscale-50: #fbfaf7;
+    --grayscale-100: #f8f0da;
+    --grayscale-200: #f0dbb2;
+    --grayscale-300: #dbb57e;
+    --grayscale-400: #c2894f;
+    --grayscale-500: #a5682e;
+    --grayscale-600: #874d1e;
+    --grayscale-700: #673a19;
+    --grayscale-800: #462713;
+    --grayscale-900: #2c180d;
 
     --accent-50: #fcfbf8;
     --accent-100: #faf0e0;
@@ -89,18 +89,6 @@
     --accent-700: #7d321f;
     --accent-800: #572216;
     --accent-900: #35150e;
-
-    // --accent-50: #fff7ed;
-    // --accent-100: #ffedd5;
-    // --accent-200: #fed7aa;
-    // --accent-300: #fdba74;
-    // --accent-400: #fb923c;
-    // --accent-500: #f97316;
-    // --accent-600: #ea580c;
-    // --accent-700: #c2410c;
-    // --accent-800: #9a3412;
-    // --accent-900: #7c2d12;
-    // --accent-950: #431407;
 
     --danger-50: #fee2e2;
     --danger-100: #fecaca;
@@ -146,16 +134,16 @@
     --info-800: #0c4a6e;
     --info-900: #082f49;
 
-    --fg-default: var(--gray-900);
-    --fg-emphasized: var(--gray-800);
-    --fg-muted: var(--gray-700);
-    --fg-subtle: var(--gray-600);
-    --fg-disabled: var(--gray-500);
-    --bg-emphasized: var(--gray-400);
-    --bg-muted: var(--gray-300);
-    --bg-subtle: var(--gray-200);
-    --bg-default: var(--gray-100);
-    --bg-canvas: var(--gray-50);
+    --fg-default: var(--grayscale-900);
+    --fg-emphasized: var(--grayscale-800);
+    --fg-muted: var(--grayscale-700);
+    --fg-subtle: var(--grayscale-600);
+    --fg-disabled: var(--grayscale-500);
+    --bg-emphasized: var(--grayscale-400);
+    --bg-muted: var(--grayscale-300);
+    --bg-subtle: var(--grayscale-200);
+    --bg-default: var(--grayscale-100);
+    --bg-canvas: var(--grayscale-50);
 
     /* Line height */
 
