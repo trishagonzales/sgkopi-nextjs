@@ -1,19 +1,35 @@
 @use '/src/styles/pattern';
 
 .root {
-  --button-color: var(--fg-disabled);
+  --default-color: var(--fg-disabled);
+  --hover-color: var(--fg-muted);
+
+  --default-color-dark: var(--bg-muted);
+  --hover-color-dark: var(--bg-subtle);
 
   background: none;
-  color: var(--button-color);
+  color: var(--default-color);
   border: 1px solid transparent;
 
+  &:hover {
+    background: unset;
+    color: var(--hover-color);
+  }
+
   &[data-variant='solid'] {
-    background: var(--button-color);
-    border-color: var(--button-color);
+    color: white;
+    background: var(--default-color);
+    border-color: var(--default-color);
+    box-shadow: var(--shadow-sm);
+
+    &:hover {
+      background: var(--hover-color);
+      border-color: var(--hover-color);
+    }
   }
 
   &[data-variant='outline'] {
-    border-color: var(--button-color);
+    border-color: var(--default-color);
 
     &:hover {
       background: var(--bg-subtle);
@@ -21,20 +37,20 @@
   }
 
   &[data-variant='muted'] {
-    background: var(--bg-default);
+    background: var(--bg-subtle);
 
     &:hover {
-      background: var(--bg-subtle);
+      background: var(--bg-muted);
     }
   }
 
   &[data-variant='ghost']:hover {
-    background: var(--bg-subtle);
+    background: var(--bg-muted);
   }
 
   &[data-variant='text'] {
     &:hover {
-      color: var(--fg-subtle);
+      color: var(--hover-color);
     }
   }
 }
