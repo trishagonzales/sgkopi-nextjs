@@ -1,7 +1,9 @@
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  // corePlugins: { preflight: false },
   darkMode: ['class'],
 
   theme: {
@@ -243,6 +245,91 @@ const config: Config = {
       },
     },
   },
+
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        '.caption': {
+          fontSize: 'var(--fs-1)',
+          fontWeight: 'var(--fw-semibold)',
+          textTransform: 'uppercase',
+        },
+        '.caption-heading': {
+          fontSize: 'var(--fs-3)',
+          fontWeight: 'var(--fw-semibold)',
+          textTransform: 'uppercase',
+        },
+
+        '.body-sm': {
+          fontSize: 'var(--fs-1)',
+          fontWeight: 'var(--fw-semibold)',
+        },
+
+        '.body': {
+          fontSize: 'var(--fs-2)',
+          fontWeight: 'var(--fw-regular)',
+        },
+
+        '.subheading': {
+          fontSize: 'var(--fs-3)',
+          fontWeight: 'var(--fw-semibold)',
+        },
+
+        '.heading': {
+          fontSize: 'var(--fs-4)',
+          fontWeight: 'var(--fw-bold)',
+        },
+
+        '.title-sm': {
+          fontSize: 'var(--fs-5)',
+          fontWeight: 'var(--fw-semibold)',
+        },
+
+        '.title-md': {
+          fontSize: 'var(--fs-6)',
+          fontWeight: 'var(--fw-regular)',
+        },
+
+        '.title-lg': {
+          fontSize: 'var(--fs-7)',
+          fontWeight: 'var(--fw-bold)',
+        },
+
+        '.display-sm': {
+          fontFamily: 'var(--font-heading)',
+          fontSize: 'var(--fs-8)',
+          fontWeight: 'var(--fw-semibold)',
+        },
+
+        '.display-md': {
+          fontFamily: 'var(--font-heading)',
+          fontSize: 'var(--fs-9)',
+          fontWeight: 'var(--fw-regular)',
+        },
+
+        '.display-lg': {
+          fontFamily: 'var(--font-heading)',
+          fontSize: 'var(--fs-10)',
+          fontWeight: 'var(--fw-bold)',
+        },
+
+        '.container-page': {
+          maxWidth: 'var(--w-page)',
+          marginInline: 'auto',
+        },
+
+        '.container-content': {
+          maxWidth: 'var(--w-content)',
+          marginInline: 'auto',
+        },
+
+        '.container-section': {
+          maxWidth: 'var(--w-section)',
+          marginInline: 'auto',
+        },
+      });
+    }),
+  ],
 };
 
 export default config;

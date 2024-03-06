@@ -3,7 +3,7 @@ import { Inter, Poppins } from 'next/font/google';
 import Providers from '@/providers';
 
 import '@mantine/core/styles.css';
-import '@/styles/index.scss';
+import '@/styles/index.css';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -35,7 +35,7 @@ export default function RootLayout({
     <html
       lang='en'
       className={`${inter.variable} ${poppins.variable}`}
-      // suppressHydrationWarning
+      suppressHydrationWarning
     >
       <body>
         <Providers>

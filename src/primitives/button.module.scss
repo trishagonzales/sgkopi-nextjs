@@ -1,7 +1,5 @@
-@use '/src/styles/pattern';
-
 .root {
-  --default-color: var(--fg-disabled);
+  --default-color: var(--fg-subtle);
   --hover-color: var(--fg-muted);
 
   --default-color-dark: var(--bg-muted);

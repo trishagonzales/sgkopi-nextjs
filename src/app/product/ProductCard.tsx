@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { classed } from '@tw-classed/react';
 import * as Fa6 from 'react-icons/fa6';
 
-import Button from '@/primitives/button/Button';
+import Button from '@/primitives/button';
 import Product from '@/modules/product/Product';
 import cs from './ProductCard.module.scss';
 
@@ -34,7 +34,7 @@ export default function ProductCard(props: Props) {
       </div>
 
       <ButtonGroup>
-        <Button isIcon variant='outline' className={cs.whishlistBtn} >
+        <Button variant='outline' className={cs.whishlistBtn}>
           <Fa6.FaRegHeart />
         </Button>
         <Button variant='solid' className={cs.orderBtn}>

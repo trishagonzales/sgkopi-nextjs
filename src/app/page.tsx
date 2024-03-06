@@ -2,14 +2,8 @@
 
 import cs from './home.module.scss';
 import Image from 'next/image';
-import Button from '@/primitives/button/Button';
+import Button from '@/primitives/button';
 import heroImage from '@public/image/image-3.jpg';
-import * as Fi from 'react-icons/fi';
-import * as Lia from 'react-icons/lia';
-import * as Pi from 'react-icons/pi';
-import * as Fa6 from 'react-icons/fa6';
-import * as Fa from 'react-icons/fa';
-import * as Ri from 'react-icons/ri';
 import Link from 'next/link';
 import Footer from './_homepage/Footer';
 import Guarantees from './_homepage/Guarantees';
@@ -45,7 +39,7 @@ function Hero() {
       <div className={cs['hero-title-container']}>
         <h1 className={cs['hero-title']}>SG KOPI</h1>
         <p className={cs['hero-subtitle']}>Discover the Taste of Singapore</p>
-        <Button className={cs['hero-btn']} size='lg'>
+        <Button className='mx-auto text-fg-default' variant='solid' size='md'>
           Order Now
         </Button>
       </div>

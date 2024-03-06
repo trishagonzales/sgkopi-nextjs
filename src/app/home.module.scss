@@ -1,7 +1,5 @@
-@use '/src/styles/pattern';
-
 .homepage {
-  @include pattern.container-page;
+  @apply container-page;
 }
 
 .hero {
@@ -38,10 +36,10 @@
   }
 
   &-title {
-    @include pattern.title-lg;
+    @apply title-lg;
     font-family: var(--font-brand);
     letter-spacing: 2px;
-    color: var(--accent-500);
+    color: var(--accent-400);
     text-shadow: 1px 1px 0 var(--accent-800), 2px 2px 0 var(--accent-800),
       3px 3px 0 var(--accent-800);
   }
@@ -49,11 +47,12 @@
   &-subtitle {
     margin-top: var(--space-md);
     margin-bottom: var(--space-2xl);
-    @include pattern.display-sm;
+    @apply display-sm;
     color: white;
   }
 
   &-btn {
+    margin-inline: auto;
     width: min(12rem, 100%);
     background-color: var(--accent-800);
     box-shadow: var(--shadow-lg);
@@ -72,12 +71,6 @@
   }
 }
 
-// @media (width < 640px) {
-//   .hero {
-//     height: calc(100dvh - 3.5rem);
-//   }
-// }
-
 @media (width < 480px) {
   .hero-btn {
     width: 100%;
@@ -85,7 +78,7 @@
 }
 
 .section-title {
-  @include pattern.title-sm;
+  @apply title-sm;
 }
 
 .promo {
@@ -103,7 +96,7 @@
   }
 
   &-name {
-    @include pattern.title-sm;
+    @apply title-sm;
     font-family: var(--font-brand);
   }
 }
