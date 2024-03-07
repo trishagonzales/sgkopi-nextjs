@@ -1,7 +1,5 @@
-@use '/src/styles/pattern';
-
 .navbar {
-  @include pattern.container-page;
+  @apply container-page;
   min-height: 3rem;
   padding: var(--space-DEFAULT) var(--space-lg);
   background: var(--bg-default);
@@ -21,7 +19,7 @@
   }
 
   &-name {
-    @include pattern.title-sm;
+    @apply title-sm;
     font-family: var(--font-brand);
   }
 }
@@ -38,7 +36,7 @@
 }
 
 .nav-item {
-  @include pattern.body;
+  @apply body;
   padding-block: 1em;
   position: relative;
   font-size: var(--fs-DEFAULT);
