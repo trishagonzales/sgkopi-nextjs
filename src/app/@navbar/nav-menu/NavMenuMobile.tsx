@@ -21,15 +21,5 @@ function HamburgerButton(props: React.HTMLAttributes<HTMLButtonElement>) {
     <Button variant='ghost' className='block md:hidden' {...props}>
       <Ri.RiMenu2Fill />
     </Button>
-
-    // <Button
-    //   variant='ghost'
-    //   size='xs'
-    //   isIcon
-    //   className='block md:hidden'
-    //   {...props}
-    // >
-    //   <Ri.RiMenu2Fill />
-    // </Button>
   );
 }

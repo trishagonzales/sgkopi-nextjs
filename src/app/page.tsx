@@ -62,7 +62,7 @@ function NewProducts() {
     </section>
   );
 }
-
+  
 const productData = Product.reconstruct({
   id: faker.string.uuid(),
   imageUrl: '/image/image-2.jpg',
